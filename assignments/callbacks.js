@@ -72,3 +72,12 @@ function removeDuplicates(array, cb) {
     return cb(newArray);
   }
 removeDuplicates(testArray, output => console.log(output));
+
+function removeDuplicatesBetter(array, cb) {
+  newArray = [];
+  array.forEach(element => {
+      if (!newArray.includes(element)){newArray.push(element)}
+    })
+    return cb(newArray);
+  }
+removeDuplicatesBetter(testArray, output => console.log(output));
